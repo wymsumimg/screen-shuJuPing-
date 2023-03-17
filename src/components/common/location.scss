@@ -1,0 +1,800 @@
+html,
+body,
+#app,
+.wrapper,
+.content-box,
+.content {
+    width: 100%;
+    height: 100%;
+    /* overflow: hidden; */
+    //   background: transparent ;
+    /* min-width: 1440px;
+    overflow-x: auto; */
+    background: #0c0629;
+    user-select: none;
+}
+.location {
+    height: 10.15rem;
+    background: url('../../assets/img/bj.png') no-repeat;
+    background-size: 100% 100%;
+    .title-box {
+        width: 100%;
+        height: 0.77rem;
+        background: url('../../assets/img/title-bg.png') no-repeat;
+        background-size: 100% 200%;
+        .time-box {
+            width: 25%;
+            height: 0.32rem;
+            font-size: 0.28rem;
+            font-family: UniDream;
+            font-weight: normal;
+            color: #7dd8ff;
+            margin: 0.23rem 0 0 0.47rem;
+            .time {
+                font-size: 0.14rem;
+                font-family: UniDream;
+                font-weight: normal;
+                color: #ffffff;
+                margin-left: 0.09rem;
+            }
+        }
+        .title {
+            position: relative;
+            width: 5.456rem;
+            height: 1.296rem;
+            font-size: 0.36rem;
+            font-family: 'PangMenZuoDao';
+            font-weight: 400;
+            line-height: 0.6rem;
+            background: linear-gradient(0deg, #ffffff 0%, #a9bacb 47.998046875%, #ffffff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            letter-spacing: 0.1rem;
+            .title-gl {
+                position: absolute;
+                top: -0.75rem;
+                left: 0.35rem;
+                width: 3.232rem;
+                height: 1.808rem;
+                background-size: 100% 100%;
+                z-index: 99;
+            }
+        }
+        .weather-box {
+            width: 25%;
+            height: 0.32rem;
+            font-size: 0.14rem;
+            font-family: PingFang;
+            font-weight: 400;
+            color: #7dd8ff;
+            line-height: 0.45rem;
+            text-align: right;
+            margin: 0.21rem 0.26rem 0 0;
+        }
+    }
+    .center {
+        width: 100%;
+        height: calc(100% - 0.8rem);
+        .left-box {
+            width: 23%;
+            height: 100%;
+            margin-left: 0.24rem;
+            .left-up {
+                width: 100%;
+                height: 48.1%;
+                .left-up-title {
+                    font-size: 0.16rem;
+                    font-family: Microsoft YaHei;
+                    font-weight: 400;
+                    color: #ffffff;
+                    line-height: 0.3rem;
+                    text-shadow: 0px 0px 5px #01fefa;
+                    margin: 0.18rem 0 0 0.23rem;
+                    .left-up-titles {
+                        font-size: 0.12rem;
+                        font-family: Microsoft YaHei;
+                        font-weight: 400;
+                        color: #6f95b2;
+                        line-height: 0.3rem;
+                        margin-left: 0.1rem;
+                        text-shadow: none;
+                    }
+                }
+                .left-up-box {
+                    position: relative;
+                    top: -0.1rem;
+                    display: inline-block;
+                    width: 90%;
+                    margin: 0 0.35rem;
+                    ul {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        width: 96%;
+                        li {
+                            display: flex;
+                            width: 1.9rem;
+                            height: 0.78rem;
+                            background: rgba(48, 64, 107, 0.38);
+                            img {
+                                width: 0.44rem;
+                                height: 0.44rem;
+                                margin: 0.18rem 0.17rem 0 0.33rem;
+                            }
+                            .num {
+                                width: 0.42rem;
+                                height: 0.16rem;
+                                font-size: 0.2rem;
+                                font-family: Microsoft YaHei;
+                                font-weight: 400;
+                                color: #ffffff;
+                                line-height: 0.09rem;
+                                margin: 0.22rem 0 0.12rem 0;
+                            }
+                            .num-title {
+                                width: 100%;
+                                height: 0.15rem;
+                                font-size: 0.14rem;
+                                font-family: Microsoft YaHei;
+                                font-weight: 400;
+                                color: #bee0fe;
+                                line-height: 0.09rem;
+                            }
+                        }
+                        li:nth-child(1) {
+                            margin-bottom: 0.2rem;
+                        }
+                    }
+                }
+                .left-up-footer {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 4.02rem;
+                    height: 30%;
+                    margin: 0 auto;
+                    .footer-1 {
+                        width: 1.13rem;
+                        height: 1.13rem;
+                        border: 0px solid #29405d;
+                        border-radius: 50%;
+                    }
+                    .echarts-title {
+                        position: relative;
+                        width: 60%;
+                        background: linear-gradient(90deg, rgba(20, 32, 54, 0.33), rgba(94, 127, 196, 0.33), rgba(20, 32, 54, 0.33));
+                        left: 0.4rem;
+                        top: -0.1rem;
+                        font-size: 0.14rem;
+                        font-family: Microsoft YaHei;
+                        font-weight: 400;
+                        color: #ffffff;
+                        line-height: 0.3rem;
+                        text-align: center;
+                    }
+                    .echarts-title::before {
+                        // 小圆点在这里
+                        content: '';
+                        position: absolute;
+                        left: -0.1rem;
+                        top: 45%;
+                        border: 1px solid #ffffff;
+                        background-color: #ffffff;
+                        display: inline-block; // 此句为css样式展示重点🏁
+                        width: 3px;
+                        height: 3px;
+                        border-radius: 50%;
+                        margin-right: 12px;
+                    }
+                    .echarts-title::after {
+                        // 小圆点在这里
+                        content: '';
+                        position: absolute;
+                        right: -0.25rem;
+                        top: 45%;
+                        border: 1px solid #ffffff;
+                        background-color: #ffffff;
+                        display: inline-block; // 此句为css样式展示重点🏁
+                        width: 3px;
+                        height: 3px;
+                        border-radius: 50%;
+                        margin-right: 12px;
+                    }
+                    .footer-2 {
+                        width: 1.14rem;
+                        height: 1.14rem;
+                        border: 0px solid #29405d;
+                        border-radius: 50%;
+                    }
+                }
+            }
+            .left-down {
+                width: 100%;
+                height: 48%;
+                margin-top: 0.07rem;
+                .left-up-title {
+                    font-size: 0.16rem;
+                    font-family: Microsoft YaHei;
+                    font-weight: 400;
+                    color: #ffffff;
+                    line-height: 0.3rem;
+                    margin: 0.18rem 0 0 0.23rem;
+                    text-shadow: 0px 0px 5px #01fefa;
+                    .left-up-titles {
+                        font-size: 0.12rem;
+                        font-family: Microsoft YaHei;
+                        font-weight: 400;
+                        color: #6f95b2;
+                        line-height: 0.3rem;
+                        margin-left: 0.1rem;
+                        text-shadow: none;
+                    }
+                }
+                .facility {
+                    margin-top: 0.1rem;
+                    .facility-title {
+                        width: 33.33%;
+                        height: 0.36rem;
+                        background: rgba(48, 64, 107, 0.67);
+                        font-size: 0.14rem;
+                        font-family: Microsoft YaHei;
+                        font-weight: 400;
+                        color: #f0f6ff;
+                        line-height: 0.36rem;
+                        padding-left: 0.3rem;
+                    }
+                    .facility_body {
+                        width: 93%;
+                        height: 3.4rem;
+                        margin: 0 auto;
+                        .facility-center {
+                            display: flex;
+                            width: 100%;
+                            height: 0.36rem;
+                            font-size: 0.14rem;
+                            font-family: Microsoft YaHei;
+                            font-weight: 400;
+                            color: #bee0fe;
+                            background: rgba(48, 64, 107, 0.38);
+                            line-height: 0.3rem;
+                            margin-top: 0.04rem;
+                            cursor: pointer;
+                            div {
+                                width: 33.33%;
+                                height: 0.36rem;
+                                padding-left: 0.3rem;
+                                margin-top: 0.04rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .center-box {
+            width: 50%;
+            height: 100%;
+            margin: 0 0.15rem;
+            .center-up {
+                width: 100%;
+                height: 65%;
+                .left-up-title {
+                    font-size: 0.16rem;
+                    font-family: Microsoft YaHei;
+                    font-weight: 400;
+                    color: #ffffff;
+                    line-height: 0.3rem;
+                    margin: 0.18rem 0 0 0.23rem;
+                    text-shadow: 0px 0px 5px #01fefa;
+                    .left-up-titles {
+                        font-size: 0.12rem;
+                        font-family: Microsoft YaHei;
+                        font-weight: 400;
+                        color: #6f95b2;
+                        line-height: 0.3rem;
+                        margin-left: 0.1rem;
+                        text-shadow: none;
+                    }
+                }
+                .center-content {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+                    .tip {
+                        position: absolute;
+                        top: 0.1rem;
+                        left: 0.1rem;
+                        width: 2.02rem;
+                        height: 100%;
+                        overflow: auto;
+                        li {
+                            position: relative;
+                            width: 1.95rem;
+                            height: 1.3rem;
+                            background: rgba(31, 39, 76, 0.85);
+                            box-shadow: inset 0rem 0rem 0.16rem 0rem rgba(101, 202, 254, 0.4);
+                            margin-bottom: 0.08rem;
+                            // clip-path: polygon(0 0, 100% 0, 100% 90%, 90% 100%, 10% 100%, 0 90%);
+                            cursor: pointer;
+                            user-select: none;
+
+                            .tip-title {
+                                width: 100%;
+                                height: 0.16rem;
+                                font-size: 0.16rem;
+                                font-family: Microsoft YaHei;
+                                font-weight: bold;
+                                color: #01fefa;
+                                text-align: center;
+                                line-height: 0.53rem;
+                                margin-bottom: 0.17rem;
+                            }
+                            .tip-style {
+                                width: 80%;
+                                height: 0.15rem;
+                                font-size: 0.14rem;
+                                font-family: Microsoft YaHei;
+                                font-weight: bold;
+                                color: #bee0fe;
+                                line-height: 0.53rem;
+                                margin-left: 0.29rem;
+                                margin-bottom: 0.09rem;
+                                span {
+                                    font-size: 0.16rem;
+                                    font-family: Microsoft YaHei;
+                                    font-weight: 400;
+                                    color: #ffffff;
+                                    line-height: 0.53rem;
+                                }
+                            }
+                        }
+                        li:last-child {
+                            margin-bottom: 0.2rem;
+                        }
+                    }
+                    .tip::-webkit-scrollbar {
+                        width: 2px; /*高宽分别对应横竖滚动条的尺寸*/
+                        border-radius: 50%;
+                    }
+                    .tip-img {
+                        position: absolute;
+                        top: 0.1rem;
+                        left: 2.1rem;
+                    }
+
+                    .center-zoom {
+                        position: absolute;
+                        width: 40px;
+                        height: 40px;
+                        right: 0.12rem;
+                        bottom: 0.1rem;
+                        border: 1px solid transparent;
+                        border-radius: 50%;
+                        i:nth-child(1) {
+                            display: block;
+                            position: absolute;
+                            top: 0px;
+                            left: 0px;
+                            margin: 20px auto;
+                            width: 0;
+                            height: 0;
+                            border: 9px solid transparent;
+                            border-left-color: #01fefa;
+                            transform: rotate(145deg);
+                            opacity: 0.5;
+                        }
+                        i:nth-child(2) {
+                            display: block;
+                            position: absolute;
+                            top: -18px;
+                            left: 23px;
+                            margin: 20px auto;
+                            width: 0;
+                            height: 0;
+                            border: 9px solid transparent;
+                            border-right-color: #01fefa;
+                            transform: rotate(145deg);
+                            opacity: 0.5;
+                        }
+                    }
+                    .center-zoom:hover {
+                        border: 1px solid #01fefa;
+                        opacity: 0.8;
+                        i:nth-child(1) {
+                            border-left-color: #01fefa;
+                            opacity: 1;
+                        }
+                        i:nth-child(2) {
+                            border-right-color: #01fefa;
+                            opacity: 1;
+                        }
+                    }
+                    .center-status {
+                        position: absolute;
+                        left: calc(50% - 2.215rem);
+                        bottom: 0.1rem;
+                        width: 4.43rem;
+                        height: 0.28rem;
+                        background: rgba(190, 224, 254, 0.06);
+                        font-size: 0.12rem;
+                        font-family: Microsoft YaHei;
+                        font-weight: 400;
+                        color: #bee0fe;
+                        line-height: 0.28rem;
+                        box-sizing: border-box;
+                        padding: 0 0.2rem;
+                        user-select: none;
+                        i {
+                            display: inline-block;
+                            width: 0.1rem;
+                            height: 0.1rem;
+                            border-radius: 50%;
+                            margin-right: 0.05rem;
+                        }
+                    }
+                }
+            }
+            .center-down {
+                width: 100%;
+                height: 31%;
+                margin-top: 0.07rem;
+                .left-up-title {
+                    font-size: 0.16rem;
+                    font-family: Microsoft YaHei;
+                    font-weight: 400;
+                    color: #ffffff;
+                    line-height: 0.3rem;
+                    margin: 0.18rem 0 0 0.23rem;
+                    text-shadow: 0px 0px 5px #01fefa;
+                    .left-up-titles {
+                        font-size: 0.12rem;
+                        font-family: Microsoft YaHei;
+                        font-weight: 400;
+                        color: #6f95b2;
+                        line-height: 0.3rem;
+                        margin-left: 0.1rem;
+                        text-shadow: none;
+                    }
+                }
+            }
+            .center-down-left {
+                width: 24%;
+                height: 100%;
+                margin: 0.07rem 0.07rem 0 0;
+                .left-up-title {
+                    font-size: 0.16rem;
+                    font-family: Microsoft YaHei;
+                    font-weight: 400;
+                    color: #ffffff;
+                    line-height: 0.3rem;
+                    margin: 0.18rem 0 0 0.23rem;
+                    text-shadow: 0px 0px 5px #01fefa;
+                    .left-up-titles {
+                        font-size: 0.12rem;
+                        font-family: Microsoft YaHei;
+                        font-weight: 400;
+                        color: #6f95b2;
+                        line-height: 0.3rem;
+                        margin-left: 0.1rem;
+                        text-shadow: none;
+                    }
+                }
+                .facility {
+                    margin-top: 0.1rem;
+                    .facility-title {
+                        width: 33.33%;
+                        height: 0.36rem;
+                        background: rgba(48, 64, 107, 0.67);
+                        font-size: 0.14rem;
+                        font-family: Microsoft YaHei;
+                        font-weight: 400;
+                        color: #f0f6ff;
+                        line-height: 0.36rem;
+                        padding-left: 0.3rem;
+                    }
+                    .facility_body {
+                        width: 93%;
+                        height: 1.75rem;
+                        margin: 0 auto;
+                        .facility-center {
+                            display: flex;
+                            width: 100%;
+                            height: 0.3rem;
+                            font-size: 0.14rem;
+                            font-family: Microsoft YaHei;
+                            font-weight: 400;
+                            color: #bee0fe;
+                            line-height: 0.3rem;
+                            div {
+                                width: 33.33%;
+                                height: 0.3rem;
+                                border-bottom: 1px solid #29405d;
+                                line-height: 0.36rem;
+                                margin-top: 0.04rem;
+                            }
+                        }
+                    }
+                }
+            }
+            .center-down-right {
+                width: 24%;
+                height: 100%;
+                margin: 0.07rem 0 0 0.07rem;
+                .left-up-title {
+                    font-size: 0.16rem;
+                    font-family: Microsoft YaHei;
+                    font-weight: 400;
+                    color: #ffffff;
+                    line-height: 0.3rem;
+                    margin: 0.18rem 0 0 0.23rem;
+                    text-shadow: 0px 0px 5px #01fefa;
+                    .left-up-titles {
+                        font-size: 0.12rem;
+                        font-family: Microsoft YaHei;
+                        font-weight: 400;
+                        color: #6f95b2;
+                        line-height: 0.3rem;
+                        margin-left: 0.1rem;
+                        text-shadow: none;
+                    }
+                }
+                .facility {
+                    margin-top: 0.1rem;
+                    .facility-title {
+                        width: 33.33%;
+                        height: 0.36rem;
+                        background: rgba(48, 64, 107, 0.67);
+                        font-size: 0.14rem;
+                        font-family: Microsoft YaHei;
+                        font-weight: 400;
+                        color: #f0f6ff;
+                        line-height: 0.36rem;
+                        padding-left: 0.3rem;
+                    }
+                    .facility_body {
+                        width: 93%;
+                        height: 1.75rem;
+                        margin: 0 auto;
+                        .facility-center {
+                            display: flex;
+                            width: 100%;
+                            height: 0.3rem;
+                            font-size: 0.14rem;
+                            font-family: Microsoft YaHei;
+                            font-weight: 400;
+                            color: #bee0fe;
+                            line-height: 0.3rem;
+                            div {
+                                width: 33.33%;
+                                height: 0.3rem;
+                                border-bottom: 1px solid #29405d;
+                                padding-left: 0.3rem;
+                                margin-top: 0.04rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .right-box {
+            width: 23%;
+            height: 100%;
+            .right-up {
+                width: 100%;
+                height: 2.62rem;
+                .left-up-title {
+                    font-size: 0.16rem;
+                    font-family: Microsoft YaHei;
+                    font-weight: 400;
+                    color: #ffffff;
+                    line-height: 0.3rem;
+                    margin: 0.18rem 0 0 0.23rem;
+                    text-shadow: 0px 0px 5px #01fefa;
+                    .left-up-titles {
+                        font-size: 0.12rem;
+                        font-family: Microsoft YaHei;
+                        font-weight: 400;
+                        color: #6f95b2;
+                        line-height: 0.3rem;
+                        margin-left: 0.1rem;
+                        text-shadow: none;
+                    }
+                }
+                .left-up-box {
+                    position: relative;
+                    top: -0.1rem;
+                    display: inline-block;
+                    width: 90%;
+                    margin: 0 0.35rem;
+                    ul {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        width: 92%;
+                        li {
+                            display: flex;
+                            width: 1.9rem;
+                            height: 0.78rem;
+                            margin-bottom: 0.1rem;
+                            img {
+                                width: 0.62rem;
+                                height: 0.62rem;
+                                margin: 0.18rem 0.17rem 0 0.33rem;
+                            }
+                            .num {
+                                width: 0.59rem;
+                                height: 0.17rem;
+                                font-size: 0.22rem;
+                                font-family: Microsoft YaHei;
+                                font-weight: 400;
+                                color: #ffffff;
+                                line-height: 0.09rem;
+                                margin: 0.32rem 0 0.12rem 0;
+                            }
+                            .num-title {
+                                width: 100%;
+                                height: 0.12rem;
+                                font-size: 0.14rem;
+                                font-family: Microsoft YaHei;
+                                font-weight: 400;
+                                color: #bee0fe;
+                                line-height: 0.09rem;
+                            }
+                        }
+                    }
+                }
+            }
+            .right-down {
+                width: 100%;
+                height: 68%;
+                margin-top: 0.07rem;
+                .left-up-title {
+                    font-size: 0.16rem;
+                    font-family: Microsoft YaHei;
+                    font-weight: 400;
+                    color: #ffffff;
+                    line-height: 0.3rem;
+                    margin: 0.18rem 0 0 0.23rem;
+                    text-shadow: 0px 0px 5px #01fefa;
+                    .left-up-titles {
+                        font-size: 0.12rem;
+                        font-family: Microsoft YaHei;
+                        font-weight: 400;
+                        color: #6f95b2;
+                        line-height: 0.3rem;
+                        margin-left: 0.1rem;
+                        text-shadow: none;
+                    }
+                }
+                .facility {
+                    .facility-title {
+                        width: 33.33%;
+                        height: 0.36rem;
+                        background: rgba(48, 64, 107, 0.67);
+                        font-size: 0.14rem;
+                        font-family: Microsoft YaHei;
+                        font-weight: 400;
+                        color: #f0f6ff;
+                        line-height: 0.36rem;
+                        padding-left: 0.3rem;
+                    }
+                    .facility_body {
+                        width: 93%;
+                        height: 5.4rem;
+                        margin: 0 auto;
+                        .facility-center {
+                            display: flex;
+                            width: 100%;
+                            height: 0.21rem;
+                            font-size: 0.14rem;
+                            font-family: Microsoft YaHei;
+                            font-weight: 400;
+                            color: #bee0fe;
+                            line-height: 0.36rem;
+                            border-left: 0.03rem solid #439de3;
+                            margin-top: 0.32rem;
+                            cursor: pointer;
+                            .right-down-title {
+                                position: relative;
+                                width: 0.6rem;
+                                height: 0.21rem;
+                                font-size: 0.14rem;
+                                font-family: Microsoft YaHei;
+                                font-weight: 400;
+                                color: #82d1ff;
+                                line-height: 0.21rem;
+                                margin: 0 0.16rem;
+                                .right-down-titles {
+                                    position: absolute;
+                                    top: -0.15rem;
+                                    left: 0.8rem;
+                                    font-size: 0.12rem;
+                                    font-family: Microsoft YaHei;
+                                    font-weight: 400;
+                                    color: #d5ebfd;
+                                    line-height: 0.24rem;
+                                }
+                            }
+                            .progress1 {
+                                position: relative;
+                                top: 0.05rem;
+                                width: 63%;
+                                height: 0.1rem;
+                                border: 1px solid #29405d;
+                                border-radius: 0.1rem;
+                                .progress2 {
+                                    position: relative;
+                                    height: 80%;
+                                    background: linear-gradient(90deg, #62f3f1, #42b0f4);
+                                    border-radius: 0.1rem;
+                                    margin-top: 0.01rem;
+                                    .progress3 {
+                                        position: absolute;
+                                        top: -3px;
+                                        right: -0.04rem;
+                                        width: 0.1rem;
+                                        height: 0.1rem;
+                                        background: #439de3;
+                                        border-radius: 50%;
+                                        box-shadow: 0 0 60px #439de3;
+                                        .progress4 {
+                                            border: 2px solid #439de3;
+                                            background: #ffffff;
+                                            border-radius: 50%;
+                                            width: 100%;
+                                            height: 100%;
+                                        }
+                                    }
+                                }
+                                .progress-title {
+                                    position: absolute;
+                                    top: -0.13rem;
+                                    right: -0.6rem;
+                                    font-size: 0.14rem;
+                                    font-family: Microsoft YaHei;
+                                    font-weight: 400;
+                                    color: #ffffff;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .box {
+        position: relative;
+        background: rgba(42, 64, 94, 0.3);
+        border: 3px solid #29405d;
+        .commn-border {
+            width: 9px;
+            height: 9px;
+            position: absolute;
+        }
+        .left-top {
+            border-top: 3px solid #01fefa;
+            border-left: 3px solid #01fefa;
+            left: -3px;
+            top: -3px;
+        }
+        .right-top {
+            border-right: 3px solid #01fefa;
+            border-top: 3px solid #01fefa;
+            right: -3px;
+            top: -3px;
+        }
+        .left-bottom {
+            border-left: 3px solid #01fefa;
+            border-bottom: 3px solid #01fefa;
+            left: -3px;
+            bottom: -3px;
+        }
+        .right-bottom {
+            border-right: 3px solid #01fefa;
+            border-bottom: 3px solid #01fefa;
+            right: -3px;
+            bottom: -3px;
+        }
+    }
+}

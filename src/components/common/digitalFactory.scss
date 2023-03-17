@@ -1,0 +1,231 @@
+html,
+body,
+#app,
+.wrapper,
+.content-box,
+.content {
+    width: 100%;
+    height: 100%;
+    /* overflow: hidden; */
+    //   background: transparent ;
+    /* min-width: 1440px;
+    overflow-x: auto; */
+    background: none;
+    user-select: none;
+}
+.digitalFactory {
+    .title-bg {
+        position: relative;
+        width: 100%;
+        height: 1.04rem;
+        background: url('../common/comImg/digitalFactory/title-bg.png') no-repeat;
+        background-size: 100% 100%;
+        .title {
+            font-size: 0.38rem;
+            font-family: 'PangMenZuoDao';
+            font-weight: 400;
+            font-style: italic;
+            color: #7bd2fa;
+            line-height: 0.7rem;
+            margin-left: 0.5rem;
+            letter-spacing: 5px;
+        }
+        .view-bg {
+            position: absolute;
+            top: 0.15rem;
+            left: 6.22rem;
+            width: 1.51rem;
+            height: 0.42rem;
+            background: url('../common/comImg/digitalFactory/zhushitu.png') no-repeat;
+            background-size: 100% 100%;
+            font-size: 0.14rem;
+            font-family: Source Han Sans CN;
+            font-weight: 400;
+            color: #82d1ff;
+            line-height: 0.42rem;
+            text-align: center;
+            cursor: pointer;
+        }
+        .time {
+            position: absolute;
+            top: 0.09rem;
+            right: 1.71rem;
+            width: 1.5rem;
+            .time1 {
+                height: 0.2rem;
+                font-size: 0.28rem;
+                font-family: UniDream;
+                font-weight: normal;
+                color: #82d1ff;
+                line-height: 0.45rem;
+                letter-spacing: 5px;
+            }
+            .time2 {
+                height: 0.2rem;
+                font-size: 0.15rem;
+                font-family: UniDream;
+                font-weight: normal;
+                color: #ffffff;
+                line-height: 0.45rem;
+            }
+        }
+        .weather {
+            position: absolute;
+            top: 0.09rem;
+            right: 0.2rem;
+            font-size: 0.16rem;
+            font-family: PingFang SC;
+            font-weight: 400;
+            color: #82d1ff;
+            line-height: 0.45rem;
+            .line {
+                position: absolute;
+                top: 0.19rem;
+                right: 1.35rem;
+                width: 0.02rem;
+                height: 0.22rem;
+                background: #b1e1f7;
+                opacity: 0.25;
+            }
+        }
+    }
+    .content {
+        display: flex;
+        justify-content: space-between;
+        box-sizing: border-box;
+        padding-left: 0.32rem;
+        .head {
+            width: 4.04rem;
+            height: 0.41rem;
+            box-sizing: border-box;
+            padding-left: 0.29rem;
+            background: url('../common/comImg/digitalFactory/head.png') no-repeat;
+            background-size: 100% 100%;
+            font-size: 0.16rem;
+            font-family: Source Han Sans CN;
+            font-weight: bold;
+            color: #ffffff;
+            line-height: 0.41rem;
+        }
+        .left {
+            width: 4.33rem;
+            height: 9rem;
+            .Level {
+                .classifier {
+                    li {
+                        width: 1.34rem;
+                        height: 0.52rem;
+                        font-size: 0.15rem;
+                        font-family: Microsoft YaHei;
+                        font-weight: 400;
+                        color: rgba(255, 255, 255, 0.9);
+                        line-height: 0.52rem;
+
+                        text-align: center;
+                        background: url('../common/comImg/digitalFactory/li.png') no-repeat;
+                        background-size: 100% 100%;
+                        cursor: pointer;
+                    }
+                }
+                .classifier-box {
+                    width: 2.48rem;
+                    height: 3.4rem;
+                    margin: 0.14rem;
+                    background: url('../common/comImg/digitalFactory/classifier.png') no-repeat;
+                    background-size: 100% 100%;
+                    ul {
+                        margin: 0.33rem auto;
+
+                        li {
+                            font-size: 0.15rem;
+                            font-family: Source Han Sans CN;
+                            font-weight: 400;
+                            color: #ffffff;
+                            line-height: 0.35rem;
+                            text-align: center;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+        .right {
+            width: 5.19rem;
+            height: 9.6rem;
+            overflow: hidden;
+            .align {
+                margin-left: 0.33rem;
+                .facility {
+                    width: 3.76rem;
+                    // height: 2.16rem;
+                    box-sizing: border-box;
+                    border: 5px solid transparent;
+                    border-top: 13px solid transparent;
+                    border-bottom: 10px solid transparent;
+                    border-image: url('../common/comImg/digitalFactory/facility-bg.png') 13 8 10 5/13px 8px 10px 5px stretch;
+                    // background: url('../common/comImg/digitalFactory/facility-bg.png') no-repeat;
+                    // background-size: 100% 100%;
+                    margin: 0.1rem 0.15rem 0;
+                    background-clip: padding-box;
+                    overflow: hidden;
+                    .facility-title {
+                        height: 0.25rem;
+                        font-size: 0.16rem;
+                        font-family: Source Han Sans CN;
+                        font-weight: 400;
+                        color: #00fdff;
+                        line-height: 0.3rem;
+
+                        .triangle {
+                            width: 0.07rem;
+                            height: 0.14rem;
+                            margin: 0.08rem 0.01rem 0 0.18rem;
+                            background: url('../common/comImg/digitalFactory/triangle.png') no-repeat;
+                            background-size: 100% 100%;
+                        }
+                    }
+                    .facility-content {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        font-size: 0.15rem;
+                        font-family: Source Han Sans CN;
+                        font-weight: 400;
+                        color: #ededed;
+                        line-height: 0.25rem;
+                        li {
+                            display: flex;
+                            justify-content: flex-end;
+                            width: 1.8rem;
+                            height: 0.25rem;
+                            margin: 0.09rem 0 0 0;
+                            div {
+                                width: 0.82rem;
+                                height: 0.25rem;
+                                background-color: rgba(84, 83, 86, 0.6);
+                                color: #ffffff;
+                            }
+                        }
+                        li:last-child {
+                            margin-bottom: 0.09rem;
+                        }
+                    }
+                }
+            }
+            .facility-box {
+                font-size: 0.14rem;
+                font-family: Microsoft YaHei;
+                font-weight: 400;
+                color: #82d1ff;
+                line-height: 0.3rem;
+                div {
+                    width: 0.7rem;
+                    text-align: center;
+                }
+            }
+            .facility-box:nth-child(even) {
+                background: rgba(130, 209, 255, 0.14);
+            }
+        }
+    }
+}

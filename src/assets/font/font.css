@@ -1,0 +1,12 @@
+/* // 这是 font.css 可设置多种字体； */
+/* // 注意：font-family: 'XXX'; 将字体名字自定义为 XXX,使用时要用这个名字 */
+
+@font-face {
+  font-family: 'PangMenZuoDao';
+  src: url('./PangMenZhengDaoBiaoTiTi-1.ttf');
+}
+
+@font-face {
+  font-family: 'UniDream';
+  src: url('./DJB-Get-Digital-1.ttf');
+}
